@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Übung</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		"use strict";
+
+		/*	&&	| Beide bedingungen müssen erfüllt sein
+			||	| Mindestens eine Bedingung muss erfüllt sein
+			<=	| kleiner gleich
+			>=	|größer Gleich
+			==	|genau gleich
+			!	|dreht zeichen um
+		*/
+
+		let a = 15;
+			console.log(a < 5);//Gibt true oder false aus (aka. Boolean)
+
+
+		let b = true;
+		let c = true;
+
+		if (b && c) {//&& heißt, dass beide Bedingungen erfüllt sein müssen. Ist einer false nennt man es logische undverknüpfung
+			console.log("IF wird ausgefuehrt");
+		}
+
+		//BEISPIEL
+
+		let x = 5;
+		let d = x<10;
+		let e = x>10;
+
+		if (x<10 && x>10) {
+			console.log("und");
+		}
+
+		if (x<10 || x>10) {
+			console.log("Oder");
+		}
+
+		if (x < 10 && (x > 10 || x == 10)) {//Bedingung 1 muss erfüllt sein, von Bedingung 2 oder 3 muss nur eine erfüllt werden
+			console.log("UndOder");
+		}
+
+		if(!(a<15)) {//zuerst wird geguckt, ob a<15 ist, wenns nicht so ist wird geguckt ob a>15 ist(wegen dem Ausrufezeichen!)ungleich
+			console.log("jo");
+		}
+
+
+
+
+		let data = ["a","b","c","d"];
+			console.log(data.indexOf("c"));//Gibt genaue position durch, an welcher stelle c ist
+			console.log(data.indexOf("e"));//Wenn nicht vorhanden, gibt er -1 aus
+			if (data.indexOf("e") == -1) {//-1 heißt er ist nicht da, bedeutet das dann if einspringt
+				console.log("Der Buchstabe e ist nicht im array");
+			}
+
+	</script>
+
+</body>
+</html>
